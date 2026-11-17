@@ -1,0 +1,136 @@
+/* --- Global Body & Background Styling --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f7;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #1e293b;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.header p {
+    color: #94a3b8;
+    margin: 8px 0 0;
+}
+
+/* --- Container Layout --- */
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 30px auto;
+    gap: 20px;
+}
+
+/* --- Box Model Implementation for Product Cards --- */
+.product-card {
+    background-color: #ffffff;
+    width: 280px;
+    
+    /* Box Model Properties */
+    padding: 20px;
+    border: 2px solid #cbd5e1;
+    margin: 10px;
+    
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: #2563eb;
+}
+
+/* --- Product Image Styling --- */
+.product-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+/* --- Typography Styling --- */
+.product-title {
+    font-size: 18px;
+    color: #1e293b;
+    margin: 10px 0 5px 0;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #16a34a;
+    margin: 5px 0 10px 0;
+}
+
+.product-desc {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* --- Pure CSS Interactive Button Styling --- */
+.btn {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Mouse le jane par color change hoga */
+.btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* Click karne par green color aur press effect aayega (Pure CSS Response) */
+.btn:active {
+    background-color: #16a34a;
+    transform: scale(0.96);
+}
+
+/* --- Footer Styling --- */
+.footer {
+    text-align: center;
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* --- Responsive Design for Mobile Screens --- */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+        max-width: 320px;
+        margin: 10px 0;
+    }
+}
